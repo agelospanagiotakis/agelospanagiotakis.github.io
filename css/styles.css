@@ -1,0 +1,257 @@
+:root {
+    --color-background: #21232c; 
+    --color-background-bio: #262626;
+    --color-text: #F0F0F7;   
+    --color-primary: #5ECBF2;
+    --color-primary-dark: #418BA6;
+    font-size: 60%; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;        
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-family: 'Source Sans Pro', sans-serif;
+    color: var(--color-primary);
+}
+
+.highlight {
+    color: var(--color-primary);
+}
+
+#container {
+    display: flex;
+    flex-direction: row;
+    color: var(--color-text);
+}
+
+#bio-container {
+    flex: 1 1 20%;
+    min-height: 100vh;
+    background-color: var(--color-background-bio);
+    text-align: center;
+    padding: 2.2rem 1.4rem; 
+    border-right: 5px solid var(--color-primary);
+}
+
+#bio-container h2 {
+    font-size: 4rem;
+}
+
+#bio-image {
+    width: 24rem;
+    border-radius: 50%;
+    margin: 3rem;
+    box-shadow: 0px 0px 15px 8px var(--color-background);
+}
+
+#bio-container p {
+    font-size: 2.4rem;
+    margin-bottom: 2.5rem;
+}
+
+#bio-container #welcome-text {
+    font-weight: bold;
+}
+
+#social-container {
+    display: flex;
+    margin-top: 6rem;
+    justify-content: space-evenly;
+    list-style: none;
+}
+
+#social-container li {
+    flex: 1 1 0;
+    max-width: 60px;
+}
+
+#social-container li a {
+    color: var(--color-primary);
+    font-size: 5rem;
+}
+
+#email-container {
+    display: flex;
+}
+
+#email-container ion-icon,
+#email-container a {
+    flex: 1 1 0;
+}
+
+#email-container a {
+    color: var(--color-primary);
+    font-size: 1.8rem;
+    text-decoration: none;
+    max-width: 225px;
+}
+
+#email-container ion-icon {
+    color: var(--color-primary);
+    font-size: 2rem;
+    max-width: 20px;
+}
+
+/*about*/
+
+#about-container {
+    flex: 0 80%;
+    background-color: var(--color-background);
+    padding: 2.8rem 8rem;
+}
+
+#name {
+    font-size: 4rem;
+    margin: auto;
+    text-align: center;
+}
+
+#title {
+    font-size: 2.6rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    text-align: center;
+}
+
+.description {
+    margin: 2rem 0;
+    font-size: 2rem;
+    text-align: center;
+    padding: 0 5rem;
+}
+
+#btn-projects {
+    font-weight: bold;
+    font-size: 2rem;
+    color: var(--color-text);
+    background-color: var(--color-primary-dark);
+    border: 0.25rem solid var(--color-primary);
+    border-radius: .8rem;
+    text-decoration: none;
+    transition: .3s;
+    margin: 3rem auto;
+    padding: 1rem 1rem;
+    width: 16rem;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#btn-projects:hover {
+    background-color: var(--color-primary);
+}
+
+#btn-projects ion-icon {
+    font-size: 1.6rem;
+    max-width: 20px;
+}
+
+#btn-projects ion-icon,
+#btn-projects span {
+    flex: 1 1 0;
+}
+
+hr { 
+    display: block;
+    margin: 2rem auto;
+    border: 1rem solid var(--color-primary);
+    border-width: 1px;
+  } 
+
+#skills-section-title {
+    font-size: 3.8rem;
+    text-align: center;
+}
+
+#skills-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 2rem;
+    text-align: center;
+    justify-content: center;
+}
+
+.skills-box {
+    flex: 1 1 30%;
+    max-width: 35%;
+}
+
+.skills-title {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    border-left: .4rem solid var(--color-primary);
+}
+
+.skills-box {
+    font-size: 5rem;
+    margin-right: .5rem;
+}
+
+@media(max-width: 450px) {
+
+    #container {
+        flex-direction: column;
+        line-height: 4.2rem;
+        justify-content: space-around;
+    }
+
+    #social-container li a {
+        justify-content: space-around;
+        font-size: 5rem;
+    }
+
+    #bio-container {
+        min-width: auto;
+        border-right: none;
+        border-bottom: 2px solid var(--color-primary);
+    }
+
+    #bio-container h2 {
+        display: none;
+    }
+
+    #bio-container p {
+        max-width: 80%;
+        margin: auto;
+    }
+
+    #name {
+        font-size: 3rem;
+        margin: 2rem auto .5rem;
+    }
+
+    #about-container {
+        text-align: center;
+        padding: .2rem;
+    }
+
+    #about-container .description {
+        margin: 2rem auto;
+        max-width: 100%;
+        line-height: 26px;
+    }
+
+    #btn-projects {
+        margin: 1rem auto;
+    }
+
+    .skills-box {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 2rem;
+        text-align: center;
+    }
+
+    .skills-box i {
+        font-size: 60px;
+    }
+}
